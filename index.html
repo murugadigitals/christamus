@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christamus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width:576px) {
+
+            main {
+                /* display: block; */
+                /* background-color: rgb(253, 253, 252); */
+                margin: 10px;
+            }
+
+
+        }
+
+        body {
+            background: URL('./public/images/backgrounds/1.jpg')
+        }
+
+        @font-face {
+            font-family: christamus;
+            src: url('./public/videos/snow.ttf');
+        }
+        #wishes, #festival {
+            font-family: christamus;
+            font-size: 3rem;
+        }
+        #festival {
+            color: red;
+        }
+        #wishes {
+            color: green;
+        }
+    </style>
+    <script>
+        function loadContent() {
+
+            document.querySelector("body").style.backgroundImage = "none";
+            document.querySelector("button").style.display = "none";
+            document.querySelector("main").style.display = "block";
+
+            setInterval(() => {
+                // document.getElementById("heading").innerText = "Dilli Babu";
+                // document.getElementById("heading").style.textAlign = "center";
+
+                document.getElementById("heading").style.color = "red";
+                document.getElementById("imgContainer").src = "./public/images/chri1.avif";
+                // document.getElementById("imgContainer").textAlign = "center";
+                document.getElementById("imgContainer").style.borderRadius = "20px";
+                // document.getElementById("heading").style.textAlign = "center";
+
+            }, 1000);
+            setInterval(() => {
+                // document.getElementById("heading").innerText = "Jambugolam";
+                document.getElementById("heading").style.color = "green";
+                document.getElementById("imgContainer").src = "./public/images/chri2.jpg";
+            }, 2000);
+            setInterval(() => {
+                /* document.getElementById("heading").innerText = "Jambugolam";
+                document.getElementById("heading").style.color = "green";
+                 */
+                document.getElementById("imgContainer").src = "./public/images/chri3.jpg";
+            }, 3000);
+
+            const aud = new Audio('./public/videos/gudiya.mp3');
+            aud.play();
+            aud.loop = true;
+        }
+
+
+    </script>
+</head>
+
+<body class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <button onclick="loadContent()" class="btn btn-primary">Click Me</button>
+    <main style="display: none;">
+        <div style="text-align: end; display: flex; justify-content: space-between align-items center;"">
+
+            <div style=" text-align:start; color: white;padding: 5px 20px;">
+            <!-- <h2>Head Record Office</h2>
+                <h2>RMS TP Dn.,Tirupati</h2> -->
+            <img src="./public/images/dilli.jpeg" alt="" width="120" height="100">
+            <h6 id="heading">Dilli Babu Jambugolam,<br>GDSMM HRO Tirupati ( Central Govt )</h6>
+        </div>
+
+        <div>
+            <img src="./public/images/logo.png" alt="" width="150" height="100">
+        </div>
+        </div>
+
+        <br>
+        <div>
+            <h1 id="wishes" style="text-align: center;">Wishes You</h1>
+            <h1 id="festival" style="text-align: center;">Merry Christamus</h1>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <img src="./public/images/chri1.avif" alt="" width="400" height="200" id="imgContainer">
+        </div>
+    </main>
+
+</body>
+
+</html>
