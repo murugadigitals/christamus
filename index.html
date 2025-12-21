@@ -25,27 +25,37 @@
             main {
                 /* display: block; */
                 /* background-color: rgb(253, 253, 252); */
-                margin: 10px;
+                margin: 15px;
+                padding: 10px;
+                border-radius: 10px;
+                /* background-color: red; */
             }
 
 
         }
 
         body {
-            background: URL('./public/images/backgrounds/1.jpg')
+            background-image: URL('./public/images/backgrounds/1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
         }
 
         @font-face {
             font-family: christamus;
             src: url('./public/videos/snow.ttf');
         }
-        #wishes, #festival {
+
+        #wishes,
+        #festival {
             font-family: christamus;
             font-size: 3rem;
         }
+
         #festival {
             color: red;
         }
+
         #wishes {
             color: green;
         }
@@ -61,18 +71,20 @@
                 // document.getElementById("heading").innerText = "Dilli Babu";
                 // document.getElementById("heading").style.textAlign = "center";
 
-                document.getElementById("heading").style.color = "red";
+                // document.getElementById("heading").style.color = "red";
                 document.getElementById("imgContainer").src = "./public/images/chri1.avif";
                 // document.getElementById("imgContainer").textAlign = "center";
                 document.getElementById("imgContainer").style.borderRadius = "20px";
                 // document.getElementById("heading").style.textAlign = "center";
 
             }, 1000);
+
             setInterval(() => {
                 // document.getElementById("heading").innerText = "Jambugolam";
-                document.getElementById("heading").style.color = "green";
+                // document.getElementById("heading").style.color = "green";
                 document.getElementById("imgContainer").src = "./public/images/chri2.jpg";
             }, 2000);
+
             setInterval(() => {
                 /* document.getElementById("heading").innerText = "Jambugolam";
                 document.getElementById("heading").style.color = "green";
@@ -85,25 +97,31 @@
             aud.loop = true;
         }
 
-
     </script>
 </head>
 
 <body class="d-flex justify-content-center align-items-center" style="height: 100vh;">
-    <button onclick="loadContent()" class="btn btn-primary">Click Me</button>
-    <main style="display: none;">
-        <div style="text-align: end; display: flex; justify-content: space-between align-items center;"">
+    <button onclick="loadContent()" class="btn btn-danger">Click Me</button>
+    <main style="display: none;background-color: rgb(20, 203, 203);padding: 10px;">
 
-            <div style=" text-align:start; color: white;padding: 5px 20px;">
-            <!-- <h2>Head Record Office</h2>
-                <h2>RMS TP Dn.,Tirupati</h2> -->
-            <img src="./public/images/dilli.jpeg" alt="" width="120" height="100">
-            <h6 id="heading">Dilli Babu Jambugolam,<br>GDSMM HRO Tirupati ( Central Govt )</h6>
-        </div>
+        <div style="display: flex; justify-content:space-between;padding: 20px;">
 
-        <div>
-            <img src="./public/images/logo.png" alt="" width="150" height="100">
-        </div>
+            <div style="color: rgb(233, 5, 5);width: 200px;">
+                <div style="display: flex;flex-direction:column;justify-content: center;align-items: start;">
+                    <div>
+                        <img src="./public/images/dilli.jpeg" alt="" width="120" height="100"
+                            style="border-radius: 10px;">
+                    </div>
+                    <div>
+                        <h6 id="heading"><span>Dilli Babu Jambugolam</span><br><span>GDSMM, O/oHRO Tirupati</span><br><span>(Central Govt)</span></h6>
+                    </div>
+                </div>
+                <!-- <h6 id="heading">( Central Govt )</h6> -->
+            </div>
+
+            <div>
+                <img style="margin-left:70px" src="./public/images/logo.png" alt="" width="150" height="100">
+            </div>
         </div>
 
         <br>
