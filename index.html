@@ -12,6 +12,7 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <style>
         * {
@@ -53,11 +54,35 @@
         }
 
         #festival {
-            color: red;
+            color: black;
         }
 
         #wishes {
-            color: green;
+            color: rgb(42, 5, 227);
+        }
+        h1{
+            animation-name: rubberBand;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        #central{
+            display: inline-block;
+            font-weight: bold;
+            font-size: 18px;
+            margin-left: 30px;
+            animation-name: heartBeat;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            /* color: yellow; */
+        }
+        .mrp{
+            color: white;
+            position: fixed;
+            top: 150px;
+            right: 75px;
+            text-align: center;
+            background-color: black;
+            overflow: hidden;
         }
     </style>
     <script>
@@ -68,27 +93,15 @@
             document.querySelector("main").style.display = "block";
 
             setInterval(() => {
-                // document.getElementById("heading").innerText = "Dilli Babu";
-                // document.getElementById("heading").style.textAlign = "center";
-
-                // document.getElementById("heading").style.color = "red";
                 document.getElementById("imgContainer").src = "./public/images/chri1.avif";
-                // document.getElementById("imgContainer").textAlign = "center";
                 document.getElementById("imgContainer").style.borderRadius = "20px";
-                // document.getElementById("heading").style.textAlign = "center";
-
             }, 1000);
 
             setInterval(() => {
-                // document.getElementById("heading").innerText = "Jambugolam";
-                // document.getElementById("heading").style.color = "green";
                 document.getElementById("imgContainer").src = "./public/images/chri2.jpg";
             }, 2000);
 
             setInterval(() => {
-                /* document.getElementById("heading").innerText = "Jambugolam";
-                document.getElementById("heading").style.color = "green";
-                 */
                 document.getElementById("imgContainer").src = "./public/images/chri3.jpg";
             }, 3000);
 
@@ -101,37 +114,41 @@
 </head>
 
 <body class="d-flex justify-content-center align-items-center" style="height: 100vh;">
-    <button onclick="loadContent()" class="btn btn-danger">Click Me</button>
+    <button onclick="loadContent()" class="btn btn-danger">New Year - 2026</button>
     <main style="display: none;background-color: rgb(20, 203, 203);padding: 10px;">
 
-        <div style="display: flex; justify-content:space-between;padding: 20px;">
+        <div style="display: flex; justify-content:space-between">
 
             <div style="color: rgb(233, 5, 5);width: 200px;">
-                <div style="display: flex;flex-direction:column;justify-content: center;align-items: start;">
+                <div style="display: flex;flex-direction:column;justify-content: center;align-items:center;">
                     <div>
-                        <img src="./public/images/dilli.jpeg" alt="" width="120" height="100"
-                            style="border-radius: 10px;">
+                        <img src="./public/images/dilli.png" alt="" width="120" height="100"
+                            style="border-radius: 10px; border: 1px solid black;">
                     </div>
                     <div>
-                        <h6 id="heading"><span>Dilli Babu Jambugolam</span><br><span>GDSMM, O/oHRO Tirupati</span><br><span>(Central Govt)</span></h6>
+                        <h6 id="heading"><span>Dilli Babu Jambugolam</span><br><span>GDSMM, O/oHRO
+                                Tirupati</span><br><span id="central">(Central Govt)</span></h6>
                     </div>
                 </div>
                 <!-- <h6 id="heading">( Central Govt )</h6> -->
             </div>
 
             <div>
-                <img style="margin-left:70px" src="./public/images/logo.png" alt="" width="150" height="100">
+                <img style="margin-right:-20px" src="./public/images/logo.png" alt="" width="150" height="100">
             </div>
         </div>
 
         <br>
         <div>
             <h1 id="wishes" style="text-align: center;">Wishes You</h1>
-            <h1 id="festival" style="text-align: center;">Merry Christamus</h1>
+            <h1 id="festival" style="text-align: center;">New Year - 2025 </h1>
         </div>
         <br>
-        <div style="text-align: center;">
+        <div>
             <img src="./public/images/chri1.avif" alt="" width="400" height="200" id="imgContainer">
+        </div>
+        <div class="mrp">
+            <h1>మోపిరెడ్డిపల్లి<br> యూత్</h1>
         </div>
     </main>
 
